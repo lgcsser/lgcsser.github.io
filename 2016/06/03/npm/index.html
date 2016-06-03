@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>npm使用指南 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://lgcsser.github.io/index.html">
+  <meta name="description" content="NPM 使用介绍NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：
+
+允许用户从NPM服务器下载别人编写的第三方包到本地使用。
+允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。
+允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。
+
+由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm使用指南">
+<meta property="og:url" content="http://lgcsser.github.io/2016/06/03/npm/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="NPM 使用介绍NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：
+
+允许用户从NPM服务器下载别人编写的第三方包到本地使用。
+允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。
+允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。
+
+由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样">
+<meta property="og:updated_time" content="2016-06-03T09:58:49.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="npm使用指南">
+<meta name="twitter:description" content="NPM 使用介绍NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：
+
+允许用户从NPM服务器下载别人编写的第三方包到本地使用。
+允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。
+允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。
+
+由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,9 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-npm" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-npm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/03/npm/" class="article-date">
   <time datetime="2016-06-03T09:18:39.000Z" itemprop="datePublished">2016-06-03</time>
@@ -77,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/npm/">npm使用指南</a>
+    <h1 class="article-title" itemprop="name">
+      npm使用指南
     </h1>
   
 
@@ -109,61 +126,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/03/hello-world/" class="article-date">
-  <time datetime="2016-06-03T07:39:06.694Z" itemprop="datePublished">2016-06-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/hello-world/">hexo 使用指南</a>
-    </h1>
+    <a href="/2016/06/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo 使用指南</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a href="https://hexo.io/官网地址" target="_blank" rel="external">https://hexo.io/官网地址</a></p>
-<h2 id="hexo前置环境"><a href="#hexo前置环境" class="headerlink" title="hexo前置环境"></a>hexo前置环境</h2><ul>
-<li>nodejs和npm包管理工具</li>
-<li>git</li>
-</ul>
-<h2 id="hexo前置技能"><a href="#hexo前置技能" class="headerlink" title="hexo前置技能"></a>hexo前置技能</h2><ul>
-<li>github账号</li>
-<li>ssh配置</li>
-<li>开源项目github托管</li>
-<li>Markdown编辑语法类似wiki</li>
-</ul>
-<h2 id="hexo命令工具"><a href="#hexo命令工具" class="headerlink" title="hexo命令工具"></a>hexo命令工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.hexo innit 工程名称</span><br><span class="line">2.hexo server 开启本地服务</span><br><span class="line">3.hexo generate 静态化文件</span><br><span class="line">4.hexo 部署命令</span><br><span class="line">5.hexo new 文章名称</span><br></pre></td></tr></table></figure>
-<p><strong>参考资源</strong><br><a href="http://www.open-open.com/lib/view/open1414396787325.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1414396787325.html</a> git使用指南<br><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">http://www.jianshu.com/p/1e402922ee32/</a>  Markdown——入门指南<br><a href="http://jingyan.baidu.com/album/f7ff0bfc7181492e27bb1360.html?picindex=2" target="_blank" rel="external">http://jingyan.baidu.com/album/f7ff0bfc7181492e27bb1360.html?picindex=2</a> 开源项目放入github托管</p>
-<p><em>Author:lgsser</em></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="ciozismvp0000u8v8li6qgz62" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
