@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ES6/ES2015 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ES6/ES2015变量
+
+var
+let 新增
+const 新增 声明常量let、const这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。首先来看下面这个例子：
+
+123456789var name = &amp;apos;lgcsserout&amp;apos;while (true) &amp;#123;    var name = &amp;apos;lgcsserinner&amp;ap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6/ES2015">
+<meta property="og:url" content="http://lgcsser.github.io/2016/06/06/ES6-ES2015/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="ES6/ES2015变量
+
+var
+let 新增
+const 新增 声明常量let、const这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。首先来看下面这个例子：
+
+123456789var name = &amp;apos;lgcsserout&amp;apos;while (true) &amp;#123;    var name = &amp;apos;lgcsserinner&amp;ap">
+<meta property="og:updated_time" content="2016-06-06T06:11:12.281Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6/ES2015">
+<meta name="twitter:description" content="ES6/ES2015变量
+
+var
+let 新增
+const 新增 声明常量let、const这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。首先来看下面这个例子：
+
+123456789var name = &amp;apos;lgcsserout&amp;apos;while (true) &amp;#123;    var name = &amp;apos;lgcsserinner&amp;ap">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lgcsser.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ES6-ES2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/06/ES6-ES2015/" class="article-date">
+  <time datetime="2016-06-06T05:50:28.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6/ES2015
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="ES6-ES2015"><a href="#ES6-ES2015" class="headerlink" title="ES6/ES2015"></a>ES6/ES2015</h2><p><strong>变量</strong></p>
+<ul>
+<li>var</li>
+<li>let 新增</li>
+<li>const 新增 声明常量<br>let、const这两个的用途与var类似，都是用来声明变量的，但在实际运用中他俩都有各自的特殊用途。<br>首先来看下面这个例子：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;lgcsserout&apos;</span><br><span class="line"></span><br><span class="line">while (true) &#123;</span><br><span class="line">    var name = &apos;lgcsserinner&apos;</span><br><span class="line">    console.log(name)  //lgcsserinner</span><br><span class="line">    break</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(name)  //lgcsserinner</span><br></pre></td></tr></table></figure>
+<p>使用var两次输出都是lgcsserinner，这是因为ES5只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。第一种场景就是你现在看到的内层变量覆盖外层变量。而let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let name = &apos;lgcsserout&apos;</span><br><span class="line"></span><br><span class="line">while (true) &#123;</span><br><span class="line">    let name = &apos;lgcsserinner&apos;</span><br><span class="line">    console.log(name)  //lgcsserinner</span><br><span class="line">    break</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(name)  //lgcsserout</span><br></pre></td></tr></table></figure></p>
+<p>from by:<a href="http://www.jianshu.com/p/ebfeb687eb70" target="_blank" rel="external">http://www.jianshu.com/p/ebfeb687eb70</a></p>
+<p><strong>Author:lgcsser</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cip3mec2b0001dov8ovq03x1i" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/06/transition/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">CSS3之-Transition过渡</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/06/ES6-ES2015/">ES6/ES2015</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/transition/">CSS3之-Transition过渡</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/03/npm/">npm使用指南</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/03/hello-world/">hexo 使用指南</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
