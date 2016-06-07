@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>bootstrap的编译系统Grunt命令行工具 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Grunt命令Bootstrap 使用 Grunt 作为编译系统，并且对外提供了一些方便的方法用于编译整个框架。下面讲解的就是如何编译源码、运行测试用例等内容。
+安装Gruntwin+R启动命令行1.在全局环境中安装grunt-cli 敲入命令：npm install -g grunt-cli2.进入/bootstrap/的根目录，执行npm install命令。npm 将读取 package.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap的编译系统Grunt命令行工具">
+<meta property="og:url" content="http://lgcsser.github.io/2016/06/07/order/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Grunt命令Bootstrap 使用 Grunt 作为编译系统，并且对外提供了一些方便的方法用于编译整个框架。下面讲解的就是如何编译源码、运行测试用例等内容。
+安装Gruntwin+R启动命令行1.在全局环境中安装grunt-cli 敲入命令：npm install -g grunt-cli2.进入/bootstrap/的根目录，执行npm install命令。npm 将读取 package.">
+<meta property="og:updated_time" content="2016-06-07T06:43:14.894Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap的编译系统Grunt命令行工具">
+<meta name="twitter:description" content="Grunt命令Bootstrap 使用 Grunt 作为编译系统，并且对外提供了一些方便的方法用于编译整个框架。下面讲解的就是如何编译源码、运行测试用例等内容。
+安装Gruntwin+R启动命令行1.在全局环境中安装grunt-cli 敲入命令：npm install -g grunt-cli2.进入/bootstrap/的根目录，执行npm install命令。npm 将读取 package.">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lgcsser.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-order" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/07/order/" class="article-date">
+  <time datetime="2016-06-07T06:34:45.000Z" itemprop="datePublished">2016-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      bootstrap的编译系统Grunt命令行工具
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="Grunt命令"><a href="#Grunt命令" class="headerlink" title="Grunt命令"></a>Grunt命令</h2><p>Bootstrap 使用 Grunt 作为编译系统，并且对外提供了一些方便的方法用于编译整个框架。下面讲解的就是如何编译源码、运行测试用例等内容。</p>
+<h3 id="安装Grunt"><a href="#安装Grunt" class="headerlink" title="安装Grunt"></a>安装Grunt</h3><p>win+R启动命令行<br>1.在全局环境中安装grunt-cli 敲入命令：npm install -g grunt-cli<br>2.进入/bootstrap/的根目录，执行npm install命令。npm 将读取 package.json 文件并自动安装此文件中列出的所有被依赖的扩展包。<br>上述步骤完成后，你就可以运行 Bootstrap 所提供的各个 Grunt 命令了。</p>
+<h2 id="可用的Grunt命令"><a href="#可用的Grunt命令" class="headerlink" title="可用的Grunt命令"></a>可用的Grunt命令</h2><ul>
+<li><em>grunt dist</em>（仅编译 CSS 和 JavaScript 文件）<br>重新生成 /dist/ 目录，并将编译压缩后的 CSS 和 JavaScript 文件放入这个目录中。作为一名 Bootstrap 用户，大部分情况下你只需要执行这一个命令。</li>
+<li><em>grunt watch</em> （监测文件的改变，并运行指定的 Grunt 任务）<br>监测 Less 源码文件的改变，并自动重新将其编译为 CSS 文件。</li>
+<li><em>grunt test</em>（运行测试用例）<br>在 PhantomJS 环境中运行 JSHint 和 QUnit 自动化测试用例。</li>
+<li><em>grunt docs</em> （编译并测试文档中的资源文件）<br>编译并测试 CSS、JavaScript 和其他资源文件。在本地环境下通过 jekyll serve 运行 Bootstrap 文档时需要用到这些资源文件。</li>
+<li><em>grunt</em> （重新构建所有内容并运行测试用例）<br>编译并压缩 CSS 和 JavaScript 文件、构建文档站点、对文档做 HTML5 校验、重新生成定制工具所需的资源文件等，都需要 Jekyll 工具。这些只有在你对 Bootstrap 深度研究时才有用。<h2 id="除错"><a href="#除错" class="headerlink" title="除错"></a>除错</h2>如果你在安装依赖包或者运行 Grunt 命令时遇到了问题，请首先删除 npm 自动生成的 /node_modules/ 目录，然后，再次运行 npm install 命令。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cip55ee6w0001l8v8mzkv6o19" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/06/jQuery-css/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery-css</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/07/order/">bootstrap的编译系统Grunt命令行工具</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/jQuery-css/">jQuery-css</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/ES6-ES2015/">ES6/ES2015</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/06/transition/">CSS3之-Transition过渡</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/03/npm/">npm使用指南</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
