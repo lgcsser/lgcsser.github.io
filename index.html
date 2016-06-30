@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-jq-this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/28/jq-this/" class="article-date">
+  <time datetime="2016-06-28T03:52:05.000Z" itemprop="datePublished">2016-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/28/jq-this/">jQuery中this与$(this)的用法区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="jQuery中this与-this-的用法区别"><a href="#jQuery中this与-this-的用法区别" class="headerlink" title="jQuery中this与$(this)的用法区别"></a>jQuery中this与$(this)的用法区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover(function() &#123;</span><br><span class="line">  this.title = &quot;Test&quot;; </span><br><span class="line">&#125;, </span><br><span class="line">fucntion() &#123; </span><br><span class="line">  this.title = &quot;OK”; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p> 这里的this其实是一个Html 元素(textbox)，textbox有text属性，所以这样写是完全没有什么问题的。 但是如果将this换成$(this)就不是那回事了，就会报错了。 以下写法是错误的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123;</span><br><span class="line">  $(this).title ＝ &quot;Test&quot;; </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).title = &quot;OK&quot;; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这里的$(this)是一个JQuery对象，而jQuery对象沒有title 属性，因此这样写是错误的。 JQuery拥有attr()方法可以get/set DOM对象的属性，所以正确的写法应该是这样： 正确的写法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;Test&apos;); </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;OK&apos;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>使用JQuery的好处是它包裝了各种浏览器版本对DOM对象的操作，因此统一使用$(this)而不再用this应该是比较不错的选择。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cipz2oftr000304v8pa5x9s9g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="port-调版命令" class="article article-type-port" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/08/调版命令/" class="article-date">
@@ -127,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cipbxie8a0006t0v8thlw6ljh" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cipz2ofty000704v85mhs26nw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cipbxie870004t0v82arxiew6" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cipz2oftt000504v8580lq1q7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cipbxie890005t0v86h5chdrw" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cipz2ofto000204v87vl07s12" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cipbxie7w0000t0v8vg7yj0xh" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cipz2oftf000004v8hi6fvq6g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -347,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cipbxie860003t0v8i1lsjs4n" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cipz2ofts000404v8u0rvpniu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -396,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/npm/" data-id="cipbxie830002t0v83ptiyor0" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/03/npm/" data-id="cipz2oftu000604v8hlidjemb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -447,7 +488,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="cipbxie810001t0v8vqw9x7ie" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="cipz2oftk000104v808mv6y5x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -487,6 +528,10 @@
       <ul>
         
           <li>
+            <a href="/2016/06/28/jq-this/">jQuery中this与$(this)的用法区别</a>
+          </li>
+        
+          <li>
             <a href="/2016/06/08/调版命令/">JavaScript入门</a>
           </li>
         
@@ -500,10 +545,6 @@
         
           <li>
             <a href="/2016/06/06/ES6-ES2015/">ES6/ES2015</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/06/transition/">CSS3之-Transition过渡</a>
           </li>
         
       </ul>
