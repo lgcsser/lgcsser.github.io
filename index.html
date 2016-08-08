@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lgcsser.github.io"></form>
@@ -63,6 +63,55 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="port-selector" class="article article-type-port" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/26/selector/" class="article-date">
+  <time datetime="2016-07-26T03:25:33.000Z" itemprop="datePublished">2016-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/26/selector/">css selector</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、基本选择器"><a href="#一、基本选择器" class="headerlink" title="一、基本选择器"></a>一、基本选择器</h3><ul>
+<li>“*” 通用选择符，匹配任何元素</li>
+<li>E      标签选择器，匹配所有使用E标签的元素</li>
+<li>.info class选择器，匹配所有class属性中包含info的元素</li>
+<li>#footer id选择器，匹配所有id属性等于footer的元素<h3 id="二、组合选择器"><a href="#二、组合选择器" class="headerlink" title="二、组合选择器"></a>二、组合选择器</h3></li>
+<li>E,F 多元素选择器，同时匹配E元素或者F元素，EF用逗号（，）分隔，也是最常用的写法之一。</li>
+<li>E F 后代元素选择器，匹配所有属于E元素后代的F元素，EF用空格分隔，也是最常用的写法之一。</li>
+<li>E &gt; F 子元素选择器，匹配所有E元素直接子元素F，非直接元素不生效</li>
+<li>E + F 毗邻元素选择器，匹配所有紧随E元素之后的同级元素F<h3 id="三、属性选择器"><a href="#三、属性选择器" class="headerlink" title="三、属性选择器"></a>三、属性选择器</h3></li>
+<li>E[att] </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;selector&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">	.hello-first&#123;</span><br><span class="line">		border: 1px solid #f00;</span><br><span class="line">		width:500px;</span><br><span class="line">		margin: 0 auto;</span><br><span class="line">	&#125;</span><br><span class="line">	.hello-first span&#123;</span><br><span class="line">		background-color: #f1f1f1;</span><br><span class="line">	&#125;</span><br><span class="line">	.hello-first &gt; span&#123;</span><br><span class="line">		color: #f00;</span><br><span class="line">		display: block;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi&#123;</span><br><span class="line">		font-size: 0;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi + span&#123;</span><br><span class="line">		font-size: 40px;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		font-size: 18px;</span><br><span class="line">		border: 1px solid #000;</span><br><span class="line">	&#125;</span><br><span class="line">	span[title]&#123;</span><br><span class="line">		font-size: 60px;</span><br><span class="line">	&#125;</span><br><span class="line">	span[title]::first-letter&#123;</span><br><span class="line">		color: #ddd;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;hello-first&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;hi&quot;&gt;</span><br><span class="line">		&lt;span title=&quot;你好呀&quot;&gt;parent one&lt;/span&gt;</span><br><span class="line">		&lt;span&gt;parent two&lt;/span&gt;</span><br><span class="line">		&lt;span&gt;parent three&lt;/span&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;span&gt;hello one&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello two&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello three&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello four&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello five&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>Author：lgcsser</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/07/26/selector/" data-id="cirlmytcm0005jsv8uk1fr0n3" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="port-setTimeout" class="article article-type-port" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -92,12 +141,12 @@
 </li>
 </ul>
 <p>setTimeout函数接收2个参数，第一个参数function or code 是将要推迟执行的函数名字或者一段代码，第二个参数delay是推迟执行的毫秒数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.log(1);</span><br><span class="line">setTimeout(&apos;console.log&quot;2&quot;&apos;,1000);//1000毫秒是1秒</span><br><span class="line">console.log(&apos;3&apos;)</span><br></pre></td></tr></table></figure></p>
-<p>结果是1,3,2因为setTimeout指定第二条语句延迟1s执行。</p>
+<p>结果是1,3,2因为setTimeout指定第二条语句延迟1s执行。<br><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/30/setTimeout/" data-id="cir1vx3ns0003c4v8y3j0dxrq" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/30/setTimeout/" data-id="cirlmytcu0008jsv8q1fuqk74" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -134,11 +183,12 @@
 <p> 这里的this其实是一个Html 元素(textbox)，textbox有text属性，所以这样写是完全没有什么问题的。 但是如果将this换成$(this)就不是那回事了，就会报错了。 以下写法是错误的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123;</span><br><span class="line">  $(this).title ＝ &quot;Test&quot;; </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).title = &quot;OK&quot;; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>这里的$(this)是一个JQuery对象，而jQuery对象沒有title 属性，因此这样写是错误的。 JQuery拥有attr()方法可以get/set DOM对象的属性，所以正确的写法应该是这样： 正确的写法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;Test&apos;); </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;OK&apos;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>使用JQuery的好处是它包裝了各种浏览器版本对DOM对象的操作，因此统一使用$(this)而不再用this应该是比较不错的选择。</p>
+<p><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cir1vx3nu0004c4v8s0arfztt" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cirlmytcj0003jsv892fg9pro" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -207,11 +257,12 @@
 <ul>
 <li>switch结构<br>多个if…else连载一起使用的时候，可以转为使用更方便的switch结构。</li>
 </ul>
+<p><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cir1vx3o20008c4v87y2esozj" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cirlmytd90009jsv8ltnma9np" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -253,11 +304,12 @@
 <li><em>grunt docs</em> （编译并测试文档中的资源文件）<br>编译并测试 CSS、JavaScript 和其他资源文件。在本地环境下通过 jekyll serve 运行 Bootstrap 文档时需要用到这些资源文件。</li>
 <li><em>grunt</em> （重新构建所有内容并运行测试用例）<br>编译并压缩 CSS 和 JavaScript 文件、构建文档站点、对文档做 HTML5 校验、重新生成定制工具所需的资源文件等，都需要 Jekyll 工具。这些只有在你对 Bootstrap 深度研究时才有用。<h2 id="除错"><a href="#除错" class="headerlink" title="除错"></a>除错</h2>如果你在安装依赖包或者运行 Grunt 命令时遇到了问题，请首先删除 npm 自动生成的 /node_modules/ 目录，然后，再次运行 npm install 命令。</li>
 </ul>
+<p><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cir1vx3nw0006c4v8gj8q9514" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cirlmytco0006jsv8jc8x7pr7" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -333,7 +385,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cir1vx3nl0001c4v8e1p5a6ip" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cirlmytch0002jsv8c88vqx67" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -380,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cir1vx3no0002c4v83u9mevxx" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cirlmytbv0000jsv8wys2bhj0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -431,7 +483,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cir1vx3o00007c4v8i7jyw06e" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cirlmytcs0007jsv85gf7idxm" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -480,7 +532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/npm/" data-id="cir1vx3nv0005c4v81gtsyg9c" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/03/npm/" data-id="cirlmytck0004jsv81mufjlcm" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -531,7 +583,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="cir1vx3ms0000c4v8be5m29ja" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="cirlmytce0001jsv879o3f79e" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -558,7 +610,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
   </div>
 
@@ -566,9 +618,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/26/selector/">css selector</a>
+          </li>
         
           <li>
             <a href="/2016/06/30/setTimeout/">定时器</a>
@@ -586,10 +642,6 @@
             <a href="/2016/06/07/order/">bootstrap的编译系统Grunt命令行工具</a>
           </li>
         
-          <li>
-            <a href="/2016/06/06/jQuery-css/">jQuery-css</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -603,7 +655,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

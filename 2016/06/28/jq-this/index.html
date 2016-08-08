@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="jQuery中this与$(this)的用法区别123456$(&amp;quot;#textbox&amp;quot;).hover(function() &amp;#123;  this.title = &amp;quot;Test&amp;quot;; &amp;#125;, fucntion() &amp;#123;   this.title = &amp;quot;OK”; &amp;#125;);
  这里的this其实是一个Html 元素(textbox">
-<meta property="og:updated_time" content="2016-06-28T06:26:55.474Z">
+<meta property="og:updated_time" content="2016-07-26T03:50:44.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery中this与$(this)的用法区别">
 <meta name="twitter:description" content="jQuery中this与$(this)的用法区别123456$(&amp;quot;#textbox&amp;quot;).hover(function() &amp;#123;  this.title = &amp;quot;Test&amp;quot;; &amp;#125;, fucntion() &amp;#123;   this.title = &amp;quot;OK”; &amp;#125;);
@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lgcsser.github.io"></form>
@@ -93,11 +93,12 @@
 <p> 这里的this其实是一个Html 元素(textbox)，textbox有text属性，所以这样写是完全没有什么问题的。 但是如果将this换成$(this)就不是那回事了，就会报错了。 以下写法是错误的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123;</span><br><span class="line">  $(this).title ＝ &quot;Test&quot;; </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).title = &quot;OK&quot;; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>这里的$(this)是一个JQuery对象，而jQuery对象沒有title 属性，因此这样写是错误的。 JQuery拥有attr()方法可以get/set DOM对象的属性，所以正确的写法应该是这样： 正确的写法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#textbox&quot;).hover( function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;Test&apos;); </span><br><span class="line">&#125;, </span><br><span class="line">function() &#123; </span><br><span class="line">  $(this).attr(&apos;title&apos;, &apos;OK&apos;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>使用JQuery的好处是它包裝了各种浏览器版本对DOM对象的操作，因此统一使用$(this)而不再用this应该是比较不错的选择。</p>
+<p><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cir1vx3nu0004c4v8s0arfztt" class="article-share-link">Share</a>
+      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cirlmytcj0003jsv892fg9pro" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,7 +108,7 @@
 <nav id="article-nav">
   
     <a href="/2016/06/30/setTimeout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           定时器
@@ -117,7 +118,7 @@
   
   
     <a href="/2016/06/08/调版命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">JavaScript入门</div>
     </a>
   
@@ -142,7 +143,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
   </div>
 
@@ -150,9 +151,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/26/selector/">css selector</a>
+          </li>
         
           <li>
             <a href="/2016/06/30/setTimeout/">定时器</a>
@@ -170,10 +175,6 @@
             <a href="/2016/06/07/order/">bootstrap的编译系统Grunt命令行工具</a>
           </li>
         
-          <li>
-            <a href="/2016/06/06/jQuery-css/">jQuery-css</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -187,7 +188,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
