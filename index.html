@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="port-selector" class="article article-type-port" itemscope itemprop="blogPost">
+    <article id="post-touchad" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/07/26/selector/" class="article-date">
-  <time datetime="2016-07-26T03:25:33.000Z" itemprop="datePublished">2016-07-26</time>
+    <a href="/2016/08/11/touchad/" class="article-date">
+  <time datetime="2016-08-11T06:11:57.000Z" itemprop="datePublished">2016-08-11</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/26/selector/">css selector</a>
+      <a class="article-title" href="/2016/08/11/touchad/">手机浏览器对广告的屏蔽</a>
     </h1>
   
 
@@ -86,26 +86,151 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、基本选择器"><a href="#一、基本选择器" class="headerlink" title="一、基本选择器"></a>一、基本选择器</h3><ul>
-<li>“*” 通用选择符，匹配任何元素</li>
-<li>E      标签选择器，匹配所有使用E标签的元素</li>
-<li>.info class选择器，匹配所有class属性中包含info的元素</li>
-<li>#footer id选择器，匹配所有id属性等于footer的元素<h3 id="二、组合选择器"><a href="#二、组合选择器" class="headerlink" title="二、组合选择器"></a>二、组合选择器</h3></li>
-<li>E,F 多元素选择器，同时匹配E元素或者F元素，EF用逗号（，）分隔，也是最常用的写法之一。</li>
-<li>E F 后代元素选择器，匹配所有属于E元素后代的F元素，EF用空格分隔，也是最常用的写法之一。</li>
-<li>E &gt; F 子元素选择器，匹配所有E元素直接子元素F，非直接元素不生效</li>
-<li>E + F 毗邻元素选择器，匹配所有紧随E元素之后的同级元素F<h3 id="三、属性选择器"><a href="#三、属性选择器" class="headerlink" title="三、属性选择器"></a>三、属性选择器</h3></li>
-<li>E[att] </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;selector&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">	.hello-first&#123;</span><br><span class="line">		border: 1px solid #f00;</span><br><span class="line">		width:500px;</span><br><span class="line">		margin: 0 auto;</span><br><span class="line">	&#125;</span><br><span class="line">	.hello-first span&#123;</span><br><span class="line">		background-color: #f1f1f1;</span><br><span class="line">	&#125;</span><br><span class="line">	.hello-first &gt; span&#123;</span><br><span class="line">		color: #f00;</span><br><span class="line">		display: block;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi&#123;</span><br><span class="line">		font-size: 0;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi + span&#123;</span><br><span class="line">		font-size: 40px;</span><br><span class="line">	&#125;</span><br><span class="line">	.hi span&#123;</span><br><span class="line">		display: inline-block;</span><br><span class="line">		font-size: 18px;</span><br><span class="line">		border: 1px solid #000;</span><br><span class="line">	&#125;</span><br><span class="line">	span[title]&#123;</span><br><span class="line">		font-size: 60px;</span><br><span class="line">	&#125;</span><br><span class="line">	span[title]::first-letter&#123;</span><br><span class="line">		color: #ddd;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;hello-first&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;hi&quot;&gt;</span><br><span class="line">		&lt;span title=&quot;你好呀&quot;&gt;parent one&lt;/span&gt;</span><br><span class="line">		&lt;span&gt;parent two&lt;/span&gt;</span><br><span class="line">		&lt;span&gt;parent three&lt;/span&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;span&gt;hello one&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello two&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello three&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello four&lt;/span&gt;</span><br><span class="line">	&lt;span&gt;hello five&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+        <hr>
+<h2 id="产生环境"><a href="#产生环境" class="headerlink" title="产生环境"></a>产生环境</h2><p>开发突然报了一个bug，说手机浏览器上论坛个人中心的信息内容不显示了，数据都在，就是不展示。于是乎开始了一系列的bug定位，js不兼容？css样式设置不当？经排查这两处都不存在问题，于是采用删减法，于此元素相毗邻的元素都删除，然而这些删减都不影响内容的展现。最后把该不显示的元素class=“adsBox”名字去掉，在手机上内容终于显示出来啦，妈蛋这是咋个情况，此元素只有一个padding值呀,这个padding不存在兼容性问题啦！于是怀疑浏览器可能会屏蔽广告ad（advertisement的简写）。后续做了一些验证。对于class=“ad”or class=“ad<em>*</em>”这样的的确是都不展示的，so大家给class起名字的时候尽可能不要用ad啦！</p>
 <p><strong>Author：lgcsser</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/07/26/selector/" data-id="cirlmytcm0005jsv8uk1fr0n3" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/08/11/touchad/" data-id="cirpxxqbj000970v874nbq4o7" class="article-share-link">Partager</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-methed" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/09/methed/" class="article-date">
+  <time datetime="2016-08-09T06:30:46.000Z" itemprop="datePublished">2016-08-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/09/methed/">html dom</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="html-dom"><a href="#html-dom" class="headerlink" title="html dom"></a>html dom</h2><h3 id="一些常用的dom方法"><a href="#一些常用的dom方法" class="headerlink" title="一些常用的dom方法"></a>一些常用的dom方法</h3><ul>
+<li>getElementById(id)-获取带有指定id的节点(元素)</li>
+<li>getElementsByTagName()-获取包含带有指定标签名称的所有元素的节点列表(集合/节点数组)</li>
+<li>getElementsByClassName()-获取包含带有指定类名的所有元素的节点列表</li>
+<li>appendChild()-把新的子节点添加到指定节点</li>
+<li>removeChild()-删除子节点</li>
+<li>replaceChild()-替换子节点</li>
+<li>insertBefore()-在指定的子节点前面插入新的子节点</li>
+<li>createAttribute()-创建属性节点</li>
+<li>createElement()-创建元素节点</li>
+<li>createTextNode()-创建元素节点</li>
+<li>getAttribute()-获取指定的属性值</li>
+<li>setAttribute()-把指定属性设置或修改为指定的值</li>
+<li>appendChild(node)-插入新的子节点(元素)</li>
+<li>removwChild(node)-删除子节点(元素)</li>
+</ul>
+<h3 id="一些常用的dom属性"><a href="#一些常用的dom属性" class="headerlink" title="一些常用的dom属性"></a>一些常用的dom属性</h3><ul>
+<li>innerHTML-节点(元素)的文本值</li>
+<li>parentNode-节点(元素)的父节点</li>
+<li>childNodes- 节点(元素)的子节点</li>
+<li>attributes -节点(元素)的属性节点</li>
+</ul>
+<h3 id="node属性"><a href="#node属性" class="headerlink" title="node属性"></a>node属性</h3><p>nodeName属性规定节点的名称，具有以下特点</p>
+<ul>
+<li>nodeName是只读的</li>
+<li>元素节点的nodeName与标签名相同(不区分大小写)</li>
+<li>属性节点的nodeName与属性名相同</li>
+<li>文本节点的nodeName始终是#text</li>
+<li>文档节点的nodeName始终是#document</li>
+</ul>
+<p>nodevalue属性规定节点的值，具有以下特点</p>
+<ul>
+<li>元素节点的nodeValue是undefined 或 null</li>
+<li>文本节点的nodeValue是文本本身</li>
+<li>属性节点的nodeValue是属性值<br>nodeType属性返回节点的类型，是只读的，比较重要的节点有<br>元素类型                nodeType<br>元素                    1<br>属性                    2<br>文本                    3<br>注释                    8<br>文档                    9</li>
+</ul>
+<p><strong>Author：lgcsser</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/08/09/methed/" data-id="cirpxxqay000770v891jcxpxd" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-regexp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/08/regexp/" class="article-date">
+  <time datetime="2016-08-08T06:32:40.000Z" itemprop="datePublished">2016-08-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/08/regexp/">Javascript regexp正则对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="新建正则对象"><a href="#新建正则对象" class="headerlink" title="新建正则对象"></a>新建正则对象</h2><p>新建正则</p>
+<ul>
+<li>字面量 var regexp = /xyz/;编译时新建,推荐使用该方法</li>
+<li>使用regexp函数，var regexp = new RegExp(‘xyz’);在运行时新建，不推荐使用该方法。</li>
+</ul>
+<p>正则对象生成后，有2种使用方法：</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li>正则对象的方法，将字符串作为参数，比如regexp.test(string)</li>
+<li>字符串对象的方法,将正则对象作为参数，比如string.match(regexp)</li>
+</ul>
+<h2 id="正则对象的属性和方法"><a href="#正则对象的属性和方法" class="headerlink" title="正则对象的属性和方法"></a>正则对象的属性和方法</h2><p>正则对象的属性分为2类</p>
+<ul>
+<li><p>修饰祥光的，返回一个布尔值，表示相应的修饰符是否设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.ignoreCase：表示是否设置了i修饰符</span><br><span class="line">2.global：表示是否设置了G修饰符</span><br><span class="line">3.multiline：表示是否这是了m修饰符，</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>与修饰无关</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lastIdex：返回下一次开始搜索的位置，该属性可读写，但是只在设置了g修饰符时有意义</span><br><span class="line">source：返回正则表达式的字符串形式（不包括反斜杠），该属性只读</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="test-该方法返回一个布尔值，表示当前模式是否能匹配参数字符串"><a href="#test-该方法返回一个布尔值，表示当前模式是否能匹配参数字符串" class="headerlink" title="test()该方法返回一个布尔值，表示当前模式是否能匹配参数字符串"></a>test()该方法返回一个布尔值，表示当前模式是否能匹配参数字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var r = /&apos;cat&apos;/;</span><br><span class="line">r.test(&apos;cat and dog&apos;); //ture</span><br></pre></td></tr></table></figure>
+<p>上面代码验证参数字符串之中是否包含cat，结果为true；<br>如果正则表达式带有g修饰符，则每一次test方法都从上一次结束的位置开始向后匹配。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var r = /x/g;</span><br><span class="line">var s = &apos;_x_x&apos;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="字符串对象的属性和方法"><a href="#字符串对象的属性和方法" class="headerlink" title="字符串对象的属性和方法"></a>字符串对象的属性和方法</h2><p><strong>Author：lgcsser</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lgcsser.github.io/2016/08/08/regexp/" data-id="cirpxxqau000670v8m6l4x2kl" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/regexp/">regexp</a></li></ul>
+
     </footer>
   </div>
   
@@ -146,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/30/setTimeout/" data-id="cirlmytcu0008jsv8q1fuqk74" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/30/setTimeout/" data-id="cirpxxqbm000b70v8hrpsqt7z" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -188,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cirlmytcj0003jsv892fg9pro" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/28/jq-this/" data-id="cirpxxqaq000370v8nvxic33u" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -262,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cirlmytd90009jsv8ltnma9np" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/08/调版命令/" data-id="cirpxxqbo000d70v8q432m07w" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -309,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cirlmytco0006jsv8jc8x7pr7" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/07/order/" data-id="cirpxxqat000570v8v0cooaon" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -385,7 +510,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cirlmytch0002jsv8c88vqx67" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/jQuery-css/" data-id="cirpxxqan000270v80scxp9c5" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -432,7 +557,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cirlmytbv0000jsv8wys2bhj0" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/ES6-ES2015/" data-id="cirpxxqak000170v8db7ko951" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -483,107 +608,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cirlmytcs0007jsv85gf7idxm" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-npm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/03/npm/" class="article-date">
-  <time datetime="2016-06-03T09:18:39.000Z" itemprop="datePublished">2016-06-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/npm/">npm使用指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="NPM-使用介绍"><a href="#NPM-使用介绍" class="headerlink" title="NPM 使用介绍"></a>NPM 使用介绍</h2><p>NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：</p>
-<ul>
-<li>允许用户从NPM服务器下载别人编写的第三方包到本地使用。</li>
-<li>允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。</li>
-<li>允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</li>
-</ul>
-<p>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以通过输入 “npm -v” 来测试是否成功安装。命令如下，出现版本提示表示安装成功:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">2.3.0</span><br></pre></td></tr></table></figure></p>
-<p>如果你安装的是旧版本的 npm，可以很容易得通过 npm 命令来升级，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install npm -g</span><br><span class="line">/usr/local/bin/npm -&gt; /usr/local/lib/node_modules/npm/bin/npm-cli.js</span><br><span class="line">npm@2.14.2 /usr/local/lib/node_modules/npm</span><br></pre></td></tr></table></figure></p>
-<p>如果是 Window 系统使用以下命令即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用-npm-命令安装模块"><a href="#使用-npm-命令安装模块" class="headerlink" title="使用 npm 命令安装模块"></a>使用 npm 命令安装模块</h2><p>npm 安装 Node.js 模块语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install &lt;Module Name&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="全局安装与本地安装"><a href="#全局安装与本地安装" class="headerlink" title="全局安装与本地安装"></a>全局安装与本地安装</h2><p>npm 包安装分为本地安装（local）、全局安装（global）两种，从敲的命令行来看，差别只是有没有-g而已，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install express          # 本地安装</span><br><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure></p>
-<p><strong>Auhor：lgcsser</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/npm/" data-id="cirlmytck0004jsv81mufjlcm" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/03/hello-world/" class="article-date">
-  <time datetime="2016-06-03T07:39:06.694Z" itemprop="datePublished">2016-06-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/hello-world/">hexo 使用指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a href="https://hexo.io/官网地址" target="_blank" rel="external">https://hexo.io/官网地址</a></p>
-<h2 id="hexo前置环境"><a href="#hexo前置环境" class="headerlink" title="hexo前置环境"></a>hexo前置环境</h2><ul>
-<li>nodejs和npm包管理工具</li>
-<li>git</li>
-</ul>
-<h2 id="hexo前置技能"><a href="#hexo前置技能" class="headerlink" title="hexo前置技能"></a>hexo前置技能</h2><ul>
-<li>github账号</li>
-<li>ssh配置</li>
-<li>开源项目github托管</li>
-<li>Markdown编辑语法类似wiki</li>
-</ul>
-<h2 id="hexo命令工具"><a href="#hexo命令工具" class="headerlink" title="hexo命令工具"></a>hexo命令工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.hexo innit 工程名称</span><br><span class="line">2.hexo server 开启本地服务</span><br><span class="line">3.hexo generate 静态化文件</span><br><span class="line">4.hexo deploy 部署命令</span><br><span class="line">5.hexo new 文章名称</span><br></pre></td></tr></table></figure>
-<p><strong>参考资源</strong><br><a href="http://www.open-open.com/lib/view/open1414396787325.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1414396787325.html</a> git使用指南<br><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">http://www.jianshu.com/p/1e402922ee32/</a>  Markdown——入门指南<br><a href="http://jingyan.baidu.com/album/f7ff0bfc7181492e27bb1360.html?picindex=2" target="_blank" rel="external">http://jingyan.baidu.com/album/f7ff0bfc7181492e27bb1360.html?picindex=2</a> 开源项目放入github托管<br><a href="http://qjzhixing.com/2015/08/26/" target="_blank" rel="external">http://qjzhixing.com/2015/08/26/</a> hexo搭建静态博客</p>
-<p><strong>Author：lgcsser</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lgcsser.github.io/2016/06/03/hello-world/" data-id="cirlmytce0001jsv879o3f79e" class="article-share-link">Partager</a>
+      <a data-url="http://lgcsser.github.io/2016/06/06/transition/" data-id="cirpxxqbl000a70v8huee2eig" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -594,6 +619,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -602,15 +631,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/regexp/">regexp</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/regexp/" style="font-size: 10px;">regexp</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
   </div>
 
@@ -623,7 +666,15 @@
       <ul>
         
           <li>
-            <a href="/2016/07/26/selector/">css selector</a>
+            <a href="/2016/08/11/touchad/">手机浏览器对广告的屏蔽</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/09/methed/">html dom</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/08/regexp/">Javascript regexp正则对象</a>
           </li>
         
           <li>
@@ -632,14 +683,6 @@
         
           <li>
             <a href="/2016/06/28/jq-this/">jQuery中this与$(this)的用法区别</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/08/调版命令/">JavaScript入门</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/07/order/">bootstrap的编译系统Grunt命令行工具</a>
           </li>
         
       </ul>
